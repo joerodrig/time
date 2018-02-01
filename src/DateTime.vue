@@ -1,7 +1,7 @@
 <template>
   <div>
     <label>{{label}} <a href='#' v-clap.prevent='setNow()'>set to now</a></label>
-    <input v-el:date type='datetime-local' v-model='value' data-input>
+    <input ref='date' type='datetime-local' v-model='value' data-input>
   </div>
 </template>
 <script>
