@@ -45,7 +45,7 @@ export default {
       createSpreadsheet(this.name).then(result => {
         this.status = '';
         const {spreadsheetId} = result;
-        this.$router.go(`/time-log/${spreadsheetId}`);
+        this.$router.push(`/time-log/${spreadsheetId}`);
       }, response => {
         this.error = getError(response)
       });
