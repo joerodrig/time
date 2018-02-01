@@ -14,17 +14,12 @@ Vue.use(VueRouter);
 Vue.use(vueClap); // This is to properly handle tap and click events
 
 // Our routing is very simple, so there is no need to extract it into separate file
-const router = new VueRouter();
-router.map({
-  '': {
-    component: ListFiles
-  },
-  '/time-log/:sheetId': {
-    component: TimeLog
-  },
-  '/create-time-log': {
-    component: CreateTimeLog
-  },
+const router = new VueRouter({
+  routes: [
+    { path: '', component: ListFiles },
+    { path: '/time-log/:sheetId', component: TimeLog },
+    { path: '/create-time-log', component: CreateTimeLog },
+  ]
 });
 
 // We start our Vue application:
