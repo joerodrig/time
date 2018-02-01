@@ -23,7 +23,11 @@ const router = new VueRouter({
 });
 
 // We start our Vue application:
-router.start(App, '#app');
+new Vue({
+  el: '#app',
+  router,
+  template: App
+})()
 
 // And immediately try to initialize Google API, even if Google client is not yet loaded:
 initializeGoogleApi();
